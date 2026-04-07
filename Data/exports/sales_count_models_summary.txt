@@ -1,0 +1,99 @@
+=== OLS on log1p(Sales Count) with HC3 robust SE ===
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            Sales_Count   R-squared:                       0.604
+Model:                            OLS   Adj. R-squared:                  0.598
+Method:                 Least Squares   F-statistic:                 4.227e+17
+Date:                Tue, 07 Apr 2026   Prob (F-statistic):               0.00
+Time:                        23:39:49   Log-Likelihood:                -2206.3
+No. Observations:                1435   AIC:                             4457.
+Df Residuals:                    1413   BIC:                             4573.
+Df Model:                          21                                         
+Covariance Type:                  HC3                                         
+=====================================================================================
+                        coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+const                 6.2386    6.2e-10   1.01e+10      0.000       6.239       6.239
+review_count      -5.425e+12   8345.010   -6.5e+08      0.000   -5.43e+12   -5.43e+12
+delivery_label_3  -1.088e+12   1673.989   -6.5e+08      0.000   -1.09e+12   -1.09e+12
+packaging_label_3  4.193e+12   6449.170    6.5e+08      0.000    4.19e+12    4.19e+12
+service_label_3   -1.765e+12   2715.127   -6.5e+08      0.000   -1.77e+12   -1.77e+12
+physical_label_3   1.639e+12   2521.562    6.5e+08      0.000    1.64e+12    1.64e+12
+price_label_3     -1.471e+12   2262.788   -6.5e+08      0.000   -1.47e+12   -1.47e+12
+content_label_2    6.654e+11   1023.421    6.5e+08      0.000    6.65e+11    6.65e+11
+content_label_3    9.939e+11   1528.777    6.5e+08      0.000    9.94e+11    9.94e+11
+delivery_label_2  -4.993e+11    768.009   -6.5e+08      0.000   -4.99e+11   -4.99e+11
+physical_label_2   1.197e+12   1841.810    6.5e+08      0.000     1.2e+12     1.2e+12
+packaging_label_2  1.108e+12   1703.929    6.5e+08      0.000    1.11e+12    1.11e+12
+service_label_2   -9.677e+10    148.848   -6.5e+08      0.000   -9.68e+10   -9.68e+10
+physical_label_0   4.159e+11    639.703    6.5e+08      0.000    4.16e+11    4.16e+11
+content_label_1    1.002e+11    154.087    6.5e+08      0.000       1e+11       1e+11
+price_label_2     -1.203e+11    185.056   -6.5e+08      0.000    -1.2e+11    -1.2e+11
+packaging_label_0  5.872e+11    903.157    6.5e+08      0.000    5.87e+11    5.87e+11
+content_label_0    6.701e+10    103.068    6.5e+08      0.000     6.7e+10     6.7e+10
+delivery_label_0  -5.647e+10     86.861   -6.5e+08      0.000   -5.65e+10   -5.65e+10
+physical_label_1   1.651e+11    253.910    6.5e+08      0.000    1.65e+11    1.65e+11
+delivery_label_1  -5.345e+10     82.206   -6.5e+08      0.000   -5.34e+10   -5.34e+10
+service_label_0   -3.266e+10     50.239   -6.5e+08      0.000   -3.27e+10   -3.27e+10
+price_label_1     -2.912e+10     44.785   -6.5e+08      0.000   -2.91e+10   -2.91e+10
+price_label_0     -1.918e+10     29.504   -6.5e+08      0.000   -1.92e+10   -1.92e+10
+packaging_label_1  5.086e+10     78.223    6.5e+08      0.000    5.09e+10    5.09e+10
+avg_rating            0.0477   2.42e-10   1.98e+08      0.000       0.048       0.048
+service_label_1   -6.515e+09     10.022   -6.5e+08      0.000   -6.52e+09   -6.52e+09
+Discount_Rate         0.2541   2.88e-10   8.81e+08      0.000       0.254       0.254
+==============================================================================
+Omnibus:                      147.880   Durbin-Watson:                   1.585
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              239.269
+Skew:                          -0.723   Prob(JB):                     1.11e-52
+Kurtosis:                       4.383   Cond. No.                     1.43e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+[2] The smallest eigenvalue is 1.3e-28. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+=== GLM Negative Binomial on Sales Count ===
+                 Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:            Sales_Count   No. Observations:                 1435
+Model:                            GLM   Df Residuals:                     1413
+Model Family:        NegativeBinomial   Df Model:                           21
+Link Function:                    Log   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -11114.
+Date:                Tue, 07 Apr 2026   Deviance:                       1466.3
+Time:                        23:39:49   Pearson chi2:                 1.66e+03
+No. Iterations:                   100   Pseudo R-squ. (CS):             0.8674
+Covariance Type:            nonrobust                                         
+=====================================================================================
+                        coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+const                 6.7450      0.026    255.272      0.000       6.693       6.797
+review_count          0.1524      0.008     19.054      0.000       0.137       0.168
+delivery_label_3      0.3506      0.063      5.569      0.000       0.227       0.474
+packaging_label_3     0.1340      0.031      4.261      0.000       0.072       0.196
+service_label_3       0.1631      0.011     15.525      0.000       0.142       0.184
+physical_label_3      0.4293      0.058      7.342      0.000       0.315       0.544
+price_label_3         0.1602      0.010     16.225      0.000       0.141       0.180
+content_label_2       0.0937      0.061      1.544      0.123      -0.025       0.213
+content_label_3       0.2010      0.046      4.364      0.000       0.111       0.291
+delivery_label_2     -0.2421      0.132     -1.832      0.067      -0.501       0.017
+physical_label_2     -0.1484      0.073     -2.023      0.043      -0.292      -0.005
+packaging_label_2     0.2466      0.092      2.682      0.007       0.066       0.427
+service_label_2      -0.0210      0.073     -0.289      0.773      -0.163       0.121
+physical_label_0     -0.0301      0.084     -0.358      0.720      -0.195       0.134
+content_label_1      -0.1045      0.061     -1.717      0.086      -0.224       0.015
+price_label_2         0.0587      0.063      0.925      0.355      -0.066       0.183
+packaging_label_0     0.0467      0.078      0.601      0.548      -0.106       0.199
+content_label_0       0.0979      0.045      2.178      0.029       0.010       0.186
+delivery_label_0     -0.0824      0.057     -1.443      0.149      -0.194       0.030
+physical_label_1     -0.1683      0.073     -2.297      0.022      -0.312      -0.025
+delivery_label_1     -0.0920      0.063     -1.472      0.141      -0.215       0.031
+service_label_0      -0.0032      0.043     -0.074      0.941      -0.087       0.081
+price_label_1         0.0241      0.047      0.513      0.608      -0.068       0.116
+price_label_0        -0.0240      0.032     -0.744      0.457      -0.087       0.039
+packaging_label_1     0.0083      0.044      0.188      0.851      -0.079       0.095
+avg_rating           -0.1249      0.027     -4.599      0.000      -0.178      -0.072
+service_label_1       0.0584      0.029      2.038      0.042       0.002       0.115
+Discount_Rate         0.1047      0.027      3.850      0.000       0.051       0.158
+=====================================================================================
